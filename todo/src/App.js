@@ -1,15 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {count, length} from './number';
 
 let gifts = "даров";
 let partOne = 5-4;
 let flag = false;
+let pow = count * length;
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <p>
+          count * length = {pow}
+        </p>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.{44}
