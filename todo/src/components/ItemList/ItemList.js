@@ -1,10 +1,10 @@
 import React from 'react';
 import Item from '../Item/Item.js';
 
-const ItemList = () => (<ul style={{color: "olive"}}>
-  <li><Item /></li>
-  <li><Item /></li>
-  <li><Item /></li>
+const ItemList = ({todoItem}) => (<ul style={{color: "olive"}}>
+  <li><Item todoItem={"React"} /></li>
+  <li><Item todoItem={"Redux"} /></li>
+  <li><Item todoItem={"Immutable"} /></li>
 </ul>);
 
 export default ItemList;

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Footer = () => (<div>Footer
+const Footer = ({count}) => (<div>
+	<div>{count} items left</div>
 	<div></div>
-	<div></div>
-	<div><button /></div>
+	<div>btn</div>
 </div>);
 
 export default Footer;
