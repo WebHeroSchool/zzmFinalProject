@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap&subset=cyrillic');
+
+.wrap {
+	margin: 0 auto;
+	width: 300px;
+	font-family: 'Rubik', sans-serif;
+}
+
+.wrap_title {
+	font-size: 100px;
+	color: gold;
+}
