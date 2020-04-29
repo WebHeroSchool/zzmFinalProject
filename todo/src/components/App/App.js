@@ -7,9 +7,18 @@ import styles from './App.module.css'
 
 const App = () => {
 	const items = [
-		{value: "React"},
-		{value: "Redux"},
-		{value: "Immutable"}
+		{
+			value: "React",
+			isDone: true
+		},
+		{
+			value: "Redux",
+			isDone: false
+		},
+		{
+			value: "Immutable",
+			isDone: true
+		}
 	];
 
 	return (

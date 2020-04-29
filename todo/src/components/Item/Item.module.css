@@ -1,0 +1,7 @@
+.item {
+	color: olive;
+}
+
+.done {
+	text-decoration: line-through;
+}
