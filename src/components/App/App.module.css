@@ -2,11 +2,13 @@
 
 .wrap {
 	margin: 0 auto;
-	width: 300px;
+	width: 700px;
 	font-family: 'Rubik', sans-serif;
+	background: #f5f5f5;
 }
 
 .title {
 	font-size: 100px;
-	color: gold;
+	color: #e5dbdc;
+	text-align: center;
 }
