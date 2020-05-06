@@ -4,9 +4,9 @@ import ItemList from '../ItemList/ItemList.js'
 import Footer from '../Footer/Footer.js'
 import styles from './App.module.css'
 
-
-const App = () => {
-	const items = [
+class App extends React.Component {
+	render() {
+		const items = [
 		{
 			value: "React",
 			isDone: true
@@ -19,14 +19,17 @@ const App = () => {
 			value: "Immutable",
 			isDone: true
 		}
-	];
+		];
 
-	return (
-		<div className={styles.wrap}>
-		  <h1 className={styles.title}>todos</h1>
-		  <InputItem />
-		  <ItemList items={items} />
-		  <Footer count={3}/>
-		</div>);
-}
+		return (
+			<div className={styles.wrap}>
+			  <h1 className={styles.title}>todos</h1>
+			  <InputItem />
+			  <ItemList items={items} />
+			  <Footer count={3}/>
+			</div>);
+	}
+};
+
+
 export default App;
