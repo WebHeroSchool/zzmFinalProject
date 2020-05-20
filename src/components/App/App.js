@@ -7,22 +7,38 @@ import styles from './App.module.css'
 class App extends React.Component {
 	state = {
 		items: [
-		{
-			value: "React",
-			isDone: true
-		},
-		{
-			value: "Redux",
-			isDone: false
-		},
-		{
-			value: "Immutable",
-			isDone: true
-		}
-		]
+			{
+				value: "React",
+				isDone: false,
+				id: 1
+			},
+			{
+				value: "Redux",
+				isDone: false,
+				id: 2
+			},
+			{
+				value: "Immutable",
+				isDone: false,
+				id: 3
+			}
+		],
+		count: 6
 	};
 
-	onClickDone = isDone => console.log(isDone);
+	onClickDone = id => {
+		const newItemList = this.state.items.map(item => {
+			const newItem = { ...item };
+
+			if (item.id === id) {
+				newItem.isDone = !item.isDone;
+			}
+
+			return newItem;
+		});
+
+		this.setState({ items: newItemList });
+	};
 
 	render() {
 		return (
@@ -30,7 +46,7 @@ class App extends React.Component {
 			  <h1 className={styles.title}>todos</h1>
 			  <InputItem />
 			  <ItemList items={this.state.items} onClickDone={this.onClickDone} />
-			  <Footer count={3}/>
+			  <Footer count={this.state.count} />
 			</div>);
 	}
 };
