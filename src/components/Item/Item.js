@@ -4,11 +4,12 @@ import styles from './Item.module.css';
 import Checkbox from '@material-ui/core/Checkbox';
 
 
-const Item = ({ value, isDone }) => (
+const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
 	<div className={styles.wrap}>
 		<Checkbox
 	        color="default"
 	        inputProps={{ 'aria-label': 'checkbox with default color' }}
+	        onClick={() => onClickDone(id)}
 	      />
 		<label className = {
 			classnames({
@@ -17,7 +18,7 @@ const Item = ({ value, isDone }) => (
 			})
 		}> {value}
 		</label>
-		<button className={styles.btn}>Delete</button>
+		<button className={styles.btn} onClick={() => onClickDelete(id)}>Delete</button>
 	</div>
 );
 

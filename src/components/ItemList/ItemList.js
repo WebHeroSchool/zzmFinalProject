@@ -1,10 +1,17 @@
 import React from 'react';
 import Item from '../Item/Item.js';
 
-const ItemList = ({ items }) => (
+const ItemList = ({ items, onClickDone, onClickDelete }) => (
 	<ul>
 		{items.map(item => <li key={item.value}>
-			<Item value={item.value} isDone={item.isDone} /></li>)}
+			<Item
+				value={item.value}
+				isDone={item.isDone}
+				id={item.id}
+				onClickDone={onClickDone}
+				onClickDelete = {onClickDelete}
+			/>
+		</li>)}
 	</ul>);
 
 export default ItemList;

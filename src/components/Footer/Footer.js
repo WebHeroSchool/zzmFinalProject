@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Footer.module.css';
 
-const Footer = ({count}) => (
+const Footer = ({ count, onClickFooter }) => (
 	<div className={styles.wrap}>
 		<div>
-			<button className={styles.btn}>{count} items left</button>
+			<button className={styles.btn} onClick={onClickFooter}>{count} items left</button>
 		</div>
 		<div className={styles.filter}>
 			<button className={styles.btn}>All</button>
