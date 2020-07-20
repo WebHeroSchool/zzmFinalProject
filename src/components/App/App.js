@@ -8,22 +8,25 @@ class App extends React.Component {
 	state = {
 		items: [
 			{
-				value: "React",
+				value: "to learn React",
 				isDone: false,
 				id: 1
+				// isDeleted: false
 			},
 			{
-				value: "Redux",
+				value: "to learn Redux",
 				isDone: false,
 				id: 2
+				// isDeleted: false
 			},
 			{
-				value: "Immutable",
+				value: "to learn Immutable",
 				isDone: false,
 				id: 3
+				// isDeleted: false
 			}
 		],
-		count: 6
+		count: 3
 	};
 
 	onClickDone = id => {
@@ -40,12 +43,18 @@ class App extends React.Component {
 		this.setState({ items: newItemList });
 	};
 
+	onClickDelete = id => {
+		this.setState(state => ({
+			items: state.items.filter(item => item.id !== id)
+		}))
+	};
+
 	render() {
 		return (
 			<div className={styles.wrap}>
 			  <h1 className={styles.title}>todos</h1>
 			  <InputItem />
-			  <ItemList items={this.state.items} onClickDone={this.onClickDone} />
+			  <ItemList items={this.state.items} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete}/>
 			  <Footer count={this.state.count} />
 			</div>);
 	}

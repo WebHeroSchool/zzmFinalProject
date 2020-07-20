@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from '../Item/Item.js';
 
-const ItemList = ({ items, onClickDone }) => (
+const ItemList = ({ items, onClickDone, onClickDelete }) => (
 	<ul>
 		{items.map(item => <li key={item.value}>
 			<Item
@@ -9,6 +9,7 @@ const ItemList = ({ items, onClickDone }) => (
 				isDone={item.isDone}
 				id={item.id}
 				onClickDone={onClickDone}
+				onClickDelete = {onClickDelete}
 			/>
 		</li>)}
 	</ul>);
